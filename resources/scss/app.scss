@@ -1,0 +1,802 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: "Roboto", sans-serif;
+}
+
+/**
+Header
+**/
+.header-navigation-area{
+
+    .header-main{
+        background: #2563eb;
+        padding: 20px 0;
+
+        .header-main__logo{
+
+            a{
+
+                h2{
+                    font-size: 1.5rem;
+                    font-weiight: 300;
+                    color: #fff;
+                }
+            }
+        }
+
+        .header-main__nav{
+
+            ul{
+                display: flex;
+                justify-content: flex-end;
+                list-style: none;
+
+                li{
+                    margin: 0 10px;
+
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.curved-border {
+    width: 100%;
+    height: 400px;
+    background-color: #f0f0f0;
+    position: relative;
+    margin-bottom: 100px;
+  }
+  
+  .curved-border::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 120px; /* Adjust to control the curve */
+    left: 0;
+    bottom: -50px; /* Adjust to control the height of the curve */
+    background-color: #1d4ed6;
+    border-radius: 50%;
+    box-shadow: 0 10px 0 10px #1d4ed6; /* To remove the overflow outside the parent */
+  }
+
+/**
+Generic Page
+**/
+.page {
+    height: 100vh;
+    background: #eee;
+
+    .page-header{
+        background: #1d4ed6;
+        padding: 40px 0;
+
+        h1.page-header-title{
+            text-align: center;
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        p.page-header-subtitle{
+            text-align: center;
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+    }
+
+    .page-content{
+        padding-top: 50px;
+
+        .coming-soon{
+            text-align: center;
+            font-size: 2rem;
+            color: #1d4ed6;
+
+            background: #fff;
+            margin-top: 100px;
+            padding: 50px;
+
+            box-shadow: 0 0 15px #aaa;
+        }
+
+        .ad-space{
+            background: red;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 0 15px #aaa;
+            border-radius: 5px;
+            color: white;
+            text-align: center;
+            height: 200px;
+        }
+
+        .row{
+
+            .page-menu{
+                background: #1d4ed6;
+                border-radius: 5px;
+                padding: 20px;
+                box-shadow: 0 0 15px #aaa;
+    
+                .page-menu-content{
+    
+                    ul{
+    
+                        li{
+                            margin-right: 20px;
+                            padding: 10px;
+    
+                            &:hover{
+                                background: #2563eb;
+                            }
+    
+                            &.active{
+                                background: #2563eb;
+                            }
+    
+                            a{
+                                color: #fff;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .page-immediate-content{
+
+            }
+        }
+    }
+}
+
+/**
+Magazine pagve
+**/
+.page{
+
+    .page-content{
+
+        .row{
+
+            .page-immediate-content{
+
+                .page-magazine-content{
+                    background: white;
+                    padding: 25px;
+                    box-shadow: 0 0 15px #aaa;
+                    border-radius: 5px;
+
+                    .row{
+
+                        .magazine-bookmarks{
+
+                            .magazine-bookmarks-header{
+                                border-bottom: 1px solid #eee;
+
+                                h2{
+                                    font-size: 1.2rem;
+                                    font-weight: bold;
+                                    margin-bottom: 20px;
+                                }
+
+                                p{
+                                    font-size: 1.0rem;
+                                    margin-bottom: 20px;
+                                }
+                            }
+
+                            .magazine-bookmarks-content{
+
+                                p{
+                                    font-size: 1.0rem;
+                                    padding: 10px;
+                                    text-align: center;
+                                }
+                            }
+                        }
+
+                        .magazine-browse-articles{
+
+                            .magazine-browse-articles-header{
+                                border-bottom: 1px solid #eee;
+
+                                h2{
+                                    font-size: 1.2rem;
+                                    font-weight: bold;
+                                    margin-bottom: 20px;
+                                }
+
+                                p{
+                                    font-size: 1.0rem;
+                                    margin-bottom: 20px;
+                                }
+                            }
+
+                            .magazine-browse-articles-content{
+
+                                .filter-articles{
+                                    margin-bottom: 15px;
+
+                                    label{
+                                        color: #333;
+                                    }
+
+                                    select{
+                                        width: 100%;
+                                        padding: 10px;
+                                        border: 1px solid #aaa;
+                                        border-radius: 5px;
+                                        background: white;
+
+                                        &:focus{
+                                            border: 1px solid #1d4ed6;
+                                        }
+                                    }
+                                }
+
+                                .articles{
+                                    border-top: 1px solid #eee;
+
+                                    .article{
+                                        border-bottom: 1px solid #eee;
+                                        padding: 20px;
+
+                                        .article-header{
+                                            h3{
+                                                font-size: 1.2rem;
+                                                font-weight: bold;
+                                            }
+
+                                            p{
+                                                font-size: 1.0rem;
+                                                margin-bottom: 10px;
+                                            }
+                                        }
+
+                                        .article-content{
+                                            p{
+                                                font-size: 1.0rem;
+                                                margin-bottom: 10px;
+                                            }
+
+                                            a{
+                                                color: #1d4ed6;
+                                                text-decoration: none;
+                                            }
+                                        }
+
+                                        .article-footer{
+                                            padding-top: 10px;
+                                            display:flex;
+                                            justify-content: space-between;
+
+                                            a{
+                                                color: #1d4ed6;
+                                                text-decoration: none;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**
+Inspiration Explorer Page
+**/
+.page-inspiration_explorer{
+    height: 100vh;
+    background: #eee;
+
+    .page-content{
+        padding-top: 50px;
+
+        .page-inspiration_explorer-menu{
+            background: #1d4ed6;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 0 15px #aaa;
+
+            .page-inspiration_explorer-menu-content{
+
+                ul{
+
+                    li{
+                        margin-right: 20px;
+                        padding: 10px;
+
+                        &:hover{
+                            background: #2563eb;
+                        }
+
+                        &.active{
+                            background: #2563eb;
+                        }
+
+                        a{
+                            color: #fff;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .page-inspiration_explorer-content{
+
+            .inspiration-explorer{
+                background: white;
+                padding: 25px;
+                box-shadow: 0 0 15px #aaa;
+                border-radius: 5px;
+
+                .inspiration-explorer-header{
+                    border-bottom: 1px solid #eee;
+
+                    h2{
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        margin-bottom: 20px;
+                    }
+
+                    p{
+                        font-size: 1.0rem;
+                        margin-bottom: 20px;
+                    }
+                }
+
+                .inspiration-explorer-content{
+
+                    .inspiration-explorer-search{
+                        padding-top: 20px;
+
+                        form{
+
+                            .select-your-interests, 
+                            .select-your-skills-and-experience{
+                                margin-bottom: 20px;
+
+                                label{
+                                    color: #333;
+                                }
+
+                                select{
+                                    width: 100%;
+                                    padding: 10px;
+                                    border: 1px solid #aaa;
+                                    border-radius: 5px;
+                                    background: white;
+
+                                    &:focus{
+                                        border: 1px solid #1d4ed6;
+                                    }
+                                }
+
+                                .selected-interests, 
+                                .selected-skills{
+                                    margin-top: 10px;
+                                    margin-bottom: 20px;
+
+                                    ul{
+
+                                        li{
+                                            display: inline-block;
+                                            margin-right: 10px;
+                                            padding: 5px 10px;
+                                            background: #1d4ed6;
+                                            color: #fff;
+                                            border-radius: 5px;
+                                        }
+                                    }
+                                }
+                            }
+
+                            .form-actions{
+                                border-top: 1px solid #eee;
+                                padding-top: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**
+Auth Page
+**/
+.auth-page{
+    background: #eee;
+    height: 100vh;
+
+    .auth-header{
+        background: #1d4ed6;
+        padding: 40px 0;
+
+        h1.auth-title{
+            text-align: center;
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        p.auth-subtitle{
+            text-align: center;
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+    }
+
+    .auth-content{
+        margin-top: 50px;
+
+        .auth-affiliate-space{
+
+            .auth-affiliate-space-content{
+                background: white;
+                padding: 20px;
+                height: 500px;
+            }
+        }
+
+        .auth-form-holder{
+            background: #fff;
+            padding: 20px;
+
+            width: 400px;
+            margin: 0 auto; 
+
+            box-shadow: 0 0 15px #aaa;
+
+            border-radius: 5px;
+
+            form{
+
+                .form-group{
+                    margin-bottom: 20px;
+
+                    label{
+                        color: #aaa;
+                    }
+
+                    input{
+                        width: 100%;
+                        padding: 10px;
+                        border: 1px solid #aaa;
+                        border-radius: 5px;
+                        background: white;
+
+                        &:focus{
+                            border: 2px solid #1d4ed6;
+                        }
+                    }
+                }
+
+                .form-group-submit{
+                    text-align: center;
+
+                    a{
+                        float: left;
+
+                        &:hover{
+                            color: #aaa;
+                            text-decoration: underline;
+                        }
+                    }
+
+                    button{
+                        background: #1d4ed6;
+                        color: #fff;
+                        padding: 10px 20px;
+                        border-radius: 5px;
+                        text-decoration: none;
+                    }
+                }
+
+                .form-group-signup{
+                    border-top: 1px solid #eee;
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+}
+
+/**
+Page: Landing Page
+**/
+.page-landing{
+
+    .page-inner{
+        height: 400px;
+
+        .page-top-hero{
+            display: flex;
+
+            padding-top: 50px;
+            background: #1d4ed6;
+            
+            .page-top-hero__content{
+                text-align: left;
+
+                h1{
+                    font-size: 3rem;
+                    color: #fff;
+                    margin-bottom: 20px;
+
+                    small{
+                        font-size: 1.5rem;
+                        color: #fff;
+                    }
+                }
+
+                p{
+                    font-size: 1.2rem;
+                    color: #fff;
+                    margin-bottom: 20px;
+                }
+
+                .page-top-hero__cta{
+                    display: flex;
+
+                    a{
+                        background: #2563eb;
+                        color: #fff;
+                        padding: 10px 20px;
+                        border-radius: 5px;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+        .page-section{
+            padding: 50px 0;
+            //background: #f0f0f0;
+            background: white;
+
+            .inner-section{
+
+                .row{
+
+                    .column-left.text, 
+                    .column-right.text{
+                        
+                        h2{
+                            font-size: 2rem;
+                            margin-bottom: 20px;
+                        }
+
+                        p{
+                            font-size: 1.2rem;
+                            margin-bottom: 20px;
+                        }
+                    }
+
+                    .column-left.image, 
+                    .column-right.image{
+                        
+                        img{
+                            width: 100%;
+                            height: auto;
+
+                            border-radius: 20% 0px;
+                        }
+                    }
+
+                    .column-left.icon,
+                    .column-right.icon{
+
+                        .icon-holder{
+                            background: #1d4ed6;
+                            color: #fff;
+                            padding: 25px;
+                            border-radius: 50%;
+                            font-size: 2rem;
+
+                            height: 100px;
+                            width: 100px;
+
+                            text-align: center;
+
+                            margin: 0 auto;
+
+                            i{
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // Inspiration Explorer
+        .page-section.inspirationexplorer-section{
+            padding: 50px 0;
+            background: #f0f0f0;
+
+            .inner-section{
+
+            }
+        }
+
+        .page-section.benefits-of-registering-section{
+            padding: 50px 0px;
+            background: #1d4ed6;
+
+            .top-hero-header{
+                text-align: center;
+                color: #fff;
+                padding-bottom: 25px;
+
+                h2{
+                    font-size: 2rem;
+                    margin-bottom: 20px;
+                }
+
+                p{
+                    font-size: 1.2rem;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .row{
+
+                .text{
+
+                    h3{
+                        font-size: 1.5rem;
+                        color: #fff;
+                        margin-bottom: 20px;
+                    }
+
+                    p{
+                        font-size: 1rem;
+                        color: #fff;
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+
+        .page-section.see-it-in-action-video-section{
+            padding: 50px 0px;
+            background: #000;
+
+            .top-hero-header{
+                text-align: center;
+                color: #fff;
+                padding-bottom: 25px;
+
+                h2{
+                    font-size: 2rem;
+                    margin-bottom: 20px;
+                }
+
+                p{
+                    font-size: 1.2rem;
+                    margin-bottom: 20px;
+                }
+            }
+
+            .row{
+
+                .text{
+
+                    video{
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+        }
+
+        .page-section.benefits-of-subscribing-section{
+            padding: 50px 0px;
+            background: #fff;
+
+            .top-hero-header{
+                text-align: center;
+                color: #000;
+                padding-bottom: 25px;
+
+                h2{
+                    font-size: 2rem;
+                    margin-bottom: 20px;
+                }
+
+                p{
+                    font-size: 1.2rem;
+                    margin-bottom: 40px;
+                }
+            }
+
+            .row{
+
+                .text{
+
+                    h3{
+                        font-size: 1.5rem;
+                        color: #000;
+                        margin-bottom: 20px;
+                    }
+
+                    p{
+                        font-size: 1rem;
+                        color: #000;
+                        margin-bottom: 20px;
+                    }
+
+                    img{
+                        width: 400px;
+                    }
+                }
+            }
+        }
+
+        .page-section.plan-your-startup-section{
+            padding: 50px 0px;
+            background: #fff;
+
+            .top-hero-header{
+                text-align: center;
+                color: #000;
+                padding-bottom: 25px;
+
+                h2{
+                    font-size: 2rem;
+                    margin-bottom: 20px;
+                }
+
+                p{
+                    font-size: 1.2rem;
+                    margin-bottom: 40px;
+                }
+            }
+
+            .row{
+
+                .text{
+
+                    h3{
+                        font-size: 1.5rem;
+                        color: #000;
+                        margin-bottom: 20px;
+                    }
+
+                    p{
+                        font-size: 1rem;
+                        color: #000;
+                        margin-bottom: 20px;
+                    }
+
+                    img{
+                        width: 400px;
+                    }
+                }
+            }
+        }
+    }
+}
