@@ -12,22 +12,20 @@
                 <div class="page-menu-content">
                     <ul>
                         <li>
-                            <a href="#">Registration Edit</a>
+                            <a href="{{ route('register') }}">Registration Edit</a>
                         </li>
                         <li>
-                            <a href="#">Inspiration Explorer</a>
+                            <a href="{{ route('inspiration_explorer.index') }}">Inspiration Explorer</a>
                         </li>
                         <li>
-                            <a href="#">Industry Explorer</a>
+                            <a href="{{ route('industry.index') }}">Industry Explorer</a>
                         </li>
                         <li class="active">
-                            <a href="#">Magazine</a>
+                            <a href="{{ route('magazine.index') }}">Magazine</a>
                         </li>
-                        @auth
-                            <li>
-                                <a href="{{ route('dashboard') }}">Dashboard</a>
-                            </li>
-                        @endauth
+                        <li>
+                            <a href="{{ route('dashboard') }}">Dashboard</a>
+                        </li>
                     </ul>
                 </div>
             </div>

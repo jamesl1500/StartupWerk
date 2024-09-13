@@ -367,6 +367,39 @@ Inspiration Explorer Page
 
                 .inspiration-explorer-content{
 
+                    .inspiration-explorer-results{
+
+                        .inspiration-explorer-results-header{
+                            border-bottom: 1px solid #eee;
+
+                            h2{
+                                font-size: 1.2rem;
+                                font-weight: bold;
+                            }
+
+                            p{
+                                font-size: 1.0rem;
+                                margin-bottom: 10px;
+                            }
+
+                        }
+
+                        .inspiration-explorer-results-content{
+
+                            .result-head{
+                                padding-top:20px;
+                                padding-bottom: 20px;
+
+                                border-bottom: 1px solid #eee;
+
+                                .result-head-content{
+                                    display: flex;
+                                    justify-content: space-between;
+                                }
+                            }
+                        }
+                    }
+
                     .inspiration-explorer-search{
                         padding-top: 20px;
 
@@ -625,6 +658,59 @@ Page: Landing Page
 
                             i{
 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .page-section.blog-and-industry-stats-section{
+            padding: 50px 0;
+            background: #f0f0f0;
+
+            .inner-section{
+
+                .row{
+
+                    .column-left{
+
+                        .article{
+                            border-bottom: 1px solid #eee;
+
+                            h3{
+                                font-size: 1.5rem;
+                                margin-bottom: 10px;
+                            }
+
+                            p{
+                                font-size: 1rem;
+                                margin-bottom: 10px;
+                            }
+
+                            a{
+                                color: #1d4ed6;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+
+                    .column-right{
+
+                        ul{
+
+                            li{
+                                margin-bottom: 20px;
+
+                                h3{
+                                    font-size: 1.5rem;
+                                    margin-bottom: 10px;
+                                }
+
+                                p{
+                                    font-size: 1rem;
+                                    margin-bottom: 10px;
+                                }
                             }
                         }
                     }

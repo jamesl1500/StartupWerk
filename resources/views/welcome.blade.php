@@ -262,6 +262,63 @@
                 </div>
             </div>
         </div>
+        <div class="page-section blog-and-industry-stats-section">
+            <div class="container inner-section">
+                <div class="row">
+                    <div class="column-left text col-lg-6">
+                        <h2>
+                            Blog
+                        </h2>
+                        <p>
+                            Read the latest articles on our blog.
+                        </p>
+                        <div class="article">
+                            <div class="article-header">
+                                <h3>
+                                    Article Title
+                                </h3>
+                                <p>
+                                    Friday 13th, 2024
+                                </p>
+                            </div>
+                            <div class="article-content">
+                                <p>
+                                    Article Content
+                                </p>
+                            </div>
+                        </div>
+                        <a href="{{ route('home') }}" class="btn btn-primary">
+                            Read More
+                        </a>
+                    </div>
+                    <div class="column-right text col-lg-6">
+                        <h2>
+                            Industry Stats
+                        </h2>
+                        <p>
+                            Top 5 Industries in Ohio
+                        </p>
+                        <ul>
+                            <li>
+                                Industry 1
+                            </li>
+                            <li>
+                                Industry 2
+                            </li>
+                            <li>
+                                Industry 3
+                            </li>
+                            <li>
+                                Industry 4
+                            </li>
+                            <li>
+                                Industry 5
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 @endsection
