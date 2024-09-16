@@ -29,7 +29,7 @@
             @yield('website')
         </div>
         <div class="footer-area">
-            @include('templates.header')
+            @include('templates.footer')
         </div>
 
         <!-- Bootstrap -->

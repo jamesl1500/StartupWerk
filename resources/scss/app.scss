@@ -131,6 +131,7 @@ Generic Page
                 border-radius: 5px;
                 padding: 20px;
                 box-shadow: 0 0 15px #aaa;
+                max-height: 300px;
     
                 .page-menu-content{
     
@@ -880,6 +881,172 @@ Page: Landing Page
 
                     img{
                         width: 400px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/**
+Page: Dashboard
+**/
+.page-dashboard{
+
+    .page-content{
+
+        .row{
+            justify-content: space-between;
+
+            .page-menu{
+
+                .page-menu-content{
+
+                }
+            }
+
+            .page-immediate-content{
+
+                .inner-immediate-content{
+                    background: white;
+                    padding: 15px;
+                    border-radius: 5px;
+                    box-shadow: 0 0 15px #aaa;
+
+                    .top-dashboard-links{
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 20px;
+                        padding-bottom: 20px;
+                        border-bottom: 1px solid #aaa;
+
+                        .link-box{
+                            background: #1d4ed6;
+                            color: #fff;
+                            padding: 20px;
+                            border-radius: 5px;
+                            text-align: center;
+
+                            flex: 1;
+                        }
+                    }
+
+                    .article-browser{
+
+                        .article-browser-header{
+                            border-bottom: 1px solid #aaa;
+                            padding-bottom: 20px;
+                            text-align: center;
+
+                            h2{
+                                font-size: 1.5rem;
+                                font-weight: bold;  
+                                padding: 10px;
+
+                            }
+
+                            p{
+                                font-size: 1.2rem;
+                            }
+                        }
+
+                        .article-browser-content{
+
+                            .filter-articles{
+                                margin-bottom: 15px;
+                                margin-top: 15px;
+
+                                label{
+                                    color: #333;
+                                }
+
+                                input{
+                                    width: 100%;
+                                    padding: 10px;
+                                    border: 1px solid #aaa;
+                                    border-radius: 5px;
+                                    background: white;
+
+                                    &:focus{
+                                        border: 1px solid #1d4ed6;
+                                    }
+                                }
+
+                                select{
+                                    width: 100%;
+                                    padding: 10px;
+                                    border: 1px solid #aaa;
+                                    border-radius: 5px;
+                                    background: white;
+
+                                    &:focus{
+                                        border: 1px solid #1d4ed6;
+                                    }
+                                }
+                            }
+
+                            .articles{
+                                border-top: 1px solid #aaa;
+
+                                .article{
+                                    border-bottom: 1px solid #aaa;
+                                    padding: 20px;
+
+                                    .article-header{
+                                        h3{
+                                            font-size: 1.2rem;
+                                            font-weight: bold;
+                                        }
+
+                                        p{
+                                            font-size: 1.0rem;
+                                            margin-bottom: 10px;
+                                        }
+                                    }
+
+                                    .article-content{
+                                        p{
+                                            font-size: 1.0rem;
+                                            margin-bottom: 10px;
+                                        }
+
+                                        a{
+                                            color: #1d4ed6;
+                                            text-decoration: none;
+                                        }
+                                    }
+
+                                    .article-footer{
+                                        padding-top: 10px;
+                                        display:flex;
+                                        justify-content: space-between;
+
+                                        a{
+                                            color: #1d4ed6;
+                                            text-decoration: none;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            .page-right-content{
+
+                .inner-right-content{
+
+                    .ad-space{
+                        margin-top: 0px;
+                    }
+
+                    .box{
+                        background: white;
+                        border-radius: 5px;
+                        margin-top: 10px;
+                        box-shadow: 0 0 15px #aaa;
+                        padding: 20px;
                     }
                 }
             }
