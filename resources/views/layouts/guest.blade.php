@@ -29,7 +29,7 @@
             @yield('website')
         </div>
         <div class="footer-area">
-
+            <!-- dont include on index page -->
         </div>
 
         <!-- Bootstrap -->

@@ -39,6 +39,18 @@
                         <div class="row">
                             <div class="inspiration-explorer-search col-lg-6">
                                 <form action="#" method="GET">
+                                    <div class="select-your-interests select_region">
+                                        <label for="region">Select your state</label><br>
+                                        <select name="region" id="region">
+                                            <option value="AL">Ohio</option>
+                                        </select>
+                                    </div>
+                                    <div class="select-your-interests select_region">
+                                        <label for="region">Select your region</label><br>
+                                        <select name="region" id="region">
+                                            <option value="AL">Lorain County</option>
+                                        </select>
+                                    </div>
                                     <div class="select-your-interests">
                                         <label for="interests">Select your industries</label><br>
                                         <select name="interests" id="interests">
@@ -57,7 +69,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="select-your-skills-and-experience">
+                                    <div class="select-your-skills-and-experience" style="display: none;">
                                         <label for="skills-and-experience">Select industry categories</label><br>
                                         <select name="skills-and-experience" id="skills-and-experience">
                                             <option value="1">Skill 1</option>
@@ -74,7 +86,7 @@
                                     </div>
 
                                     <div class="form-actions">
-                                        <button type="submit" class="btn btn-primary">Search</button>
+                                        <button type="submit" class="btn btn-primary">Save</button>
                                         <button type="reset" class="btn btn-secondary">Reset</button>
                                     </div>
                                 </form>
@@ -93,8 +105,47 @@
                                             <h3><b>Industry:</b> Industry 1</h3>
                                         </div>
                                         <div class="us-metrics">
-                                            <div class="us-metrics-boxes">
+                                            <div class="us-metrics-head">
+                                                <h3>US Metrics</h3>
+                                            </div>
+                                            <div class="us-metrics-boxes row">
+                                                <div class="metric-box col-lg-4">
+                                                    <h3>Statistics</h3>
+                                                    <div class="metric-box-content">
 
+                                                    </div>
+                                                </div>
+                                                <div class="metric-box col-lg-4">
+                                                    <h3>Skills Required</h3>
+                                                    <div class="metric-box-content">
+                                                        
+                                                    </div>
+                                                </div>
+                                                <div class="metric-box col-lg-4">
+                                                    <h3>Startup Costs</h3>
+                                                    <div class="metric-box-content">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="us-metrics">
+                                            <div class="us-metrics-head">
+                                                <h3>Regional Metrics</h3>
+                                            </div>
+                                            <div class="us-metrics-boxes row">
+                                                <div class="metric-box col-lg-4">
+                                                    <h3>Statistics</h3>
+                                                    <div class="metric-box-content">
+
+                                                    </div>
+                                                </div>
+                                                <div class="metric-box col-lg-4">
+                                                    <h3>Growth of Similar Businesses</h3>
+                                                    <div class="metric-box-content">
+                                                        
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -105,7 +156,7 @@
                 </div>
 
                 <!-- Ad space -->
-                <div class="ad-space">
+                <div class="ad-space col-lg-5">
                     <div class="ad-space-content">
                         Ad Space
                     </div>

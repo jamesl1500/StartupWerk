@@ -22,7 +22,7 @@
                     <li>
                         <a href="{{ route('dashboard') }}">My Dashboard</a>
                     </li>
-                    <li>
+                    <li style="display: none;">
                         <a href="{{ route('search') }}">Search</a>
                     </li>
                 </ul>

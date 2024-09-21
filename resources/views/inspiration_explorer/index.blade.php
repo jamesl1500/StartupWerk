@@ -38,44 +38,88 @@
                     <div class="inspiration-explorer-content">
                         <div class="inspiration-explorer-search">
                             <form action="#" method="GET">
-                                <div class="select-your-interests">
-                                    <label for="interests">Select your interests</label><br>
-                                    <select name="interests" id="interests">
-                                        <option value="1">Interest 1</option>
-                                        <option value="2">Interest 2</option>
-                                        <option value="3">Interest 3</option>
-                                    </select>
+                                <div class="row">
+                                    <div class="search-left col-lg-7">
+                                        <div class="select-your-interests">
+                                            <label for="interests">Select your interests</label><br>
+                                            <select name="interests" id="interests">
+                                                <option value="1">Interest 1</option>
+                                                <option value="2">Interest 2</option>
+                                                <option value="3">Interest 3</option>
+                                            </select>
 
-                                    <!-- When the user selects an interest, the page should reload and display the selected interest -->
-                                    <div class="selected-interests">
-                                        <p>Selected Interest:</p>
-                                        <ul>
-                                            <li>Interest 1 <span class="delete">x</span></li>
-                                        </ul>
+                                            <!-- When the user selects an interest, the page should reload and display the selected interest -->
+                                            <div class="selected-interests">
+                                                <p>Selected Interest:</p>
+                                                <ul>
+                                                    <li>Interest 1 <span class="delete">x</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="select-your-skills-and-experience">
+                                            <label for="skills-and-experience">Select your skills and experience</label><br>
+                                            <select name="skills-and-experience" id="skills-and-experience">
+                                                <option value="1">Skill 1</option>
+                                                <option value="2">Skill 2</option>
+                                                <option value="3">Skill 3</option>
+                                            </select>
+
+                                            <div class="selected-skills">
+                                                <p>Selected Skills:</p>
+                                                <ul>
+                                                    <li>Skill 1 <span class="delete">x</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-actions">
+                                            <button type="submit" class="btn btn-primary">Save</button>
+                                            <button type="reset" class="btn btn-secondary">Reset</button>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="select-your-skills-and-experience">
-                                    <label for="skills-and-experience">Select your skills and experience</label><br>
-                                    <select name="skills-and-experience" id="skills-and-experience">
-                                        <option value="1">Skill 1</option>
-                                        <option value="2">Skill 2</option>
-                                        <option value="3">Skill 3</option>
-                                    </select>
-
-                                    <div class="selected-skills">
-                                        <p>Selected Skills:</p>
-                                        <ul>
-                                            <li>Skill 1 <span class="delete">x</span></li>
-                                        </ul>
+                                    <div class="search-right col-lg-5">
+                                        <div class="search-results">
+                                            <h2>Results</h2>
+                                            <p>Here are the industries we found</p>
+                                            <ul>
+                                                <li>Industry 1 <span class="delete">Add</span></li>
+                                                <li>Industry 2 <span class="delete">Add</span></li>
+                                                <li>Industry 3 <span class="delete">Add</span></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <div class="form-actions">
-                                    <button type="submit" class="btn btn-primary">Search</button>
-                                    <button type="reset" class="btn btn-secondary">Reset</button>
                                 </div>
                             </form>
+                        </div>
+                        <div class="inspiration-explorer-results">
+                            <div class="inspiration-explorer-results-header">
+                                <h2>Results</h2>
+                                <p>Here are the industries that you selected</p>
+                            </div>
+                            <div class="inspiration-explorer-results-content f">
+                                <div class="industry">
+                                    <div class="industry-header">
+                                        <span>x</span>
+                                        <h2><i class="fa fa-industry"></i></h2>
+                                        <h3>Industry 1</h3>
+                                    </div>
+                                </div>
+                                <div class="industry">
+                                    <div class="industry-header">
+                                        <span>x</span>
+                                        <h2><i class="fa fa-industry"></i></h2>
+                                        <h3>Industry 2</h3>
+                                    </div>
+                                </div>
+                                <div class="industry">
+                                    <div class="industry-header">
+                                        <span>x</span>
+                                        <h2><i class="fa fa-industry"></i></h2>
+                                        <h3>Industry 3</h3>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

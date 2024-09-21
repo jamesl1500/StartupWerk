@@ -39,19 +39,19 @@
                             </div>
                             <div class="magazine-browse-articles-content">
                                 <div class="filter-articles">
-                                    <label for="filter-articles">Filter By Region</label><br>
-                                    <select name="filter-articles" id="filter-articles">
-                                        <option value="1">Region 1</option>
-                                        <option value="2">Region 2</option>
-                                        <option value="3">Region 3</option>
-                                    </select>
-                                </div>
-                                <div class="filter-articles">
                                     <label for="filter-articles">Filter By: </label><br>
                                     <select name="filter-articles" id="filter-articles">
                                         <option value="1">All News</option>
                                         <option value="2">All Events</option>
                                         <option value="3">Regulations</option>
+                                    </select>
+                                </div>
+                                <div class="filter-articles">
+                                    <label for="filter-articles">Bookmarks</label><br>
+                                    <select name="filter-articles" id="filter-articles">
+                                        <option value="1">Bookmark 1</option>
+                                        <option value="2">Bookmark 2</option>
+                                        <option value="3">Bookmark 3</option>
                                     </select>
                                 </div>
 
@@ -73,7 +73,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="magazine-bookmarks col-lg-4">
+                        <div class="magazine-bookmarks col-lg-4 " style="display: none;">
                             <div class="magazine-bookmarks-header">
                                 <h2>Bookmarks</h2>
                                 <p>Find the articles you saved for later</p>
@@ -88,7 +88,7 @@
         </div>
 
         <!-- Coming soon -->
-        <div class="coming-soon">
+        <div class="coming-soon" style="display: none;">
             <h2>Coming Soon</h2>
             <p>We are working on some great features that will be available to our subscribers.
             </p>
