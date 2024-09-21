@@ -1100,14 +1100,36 @@ Page: Dashboard
                         }
 
                         .selected-industry-stats{
-                            display: flex;
-                            gap: 20px;
                             border-top: 1px solid #eee;
                             padding-top: 20px;
 
                             // Have only 4 industries in a row
+                            justify-content: space-between;
 
+                            .us-metrics{
+                                padding-top: 15px;
 
+                                .us-metrics-head{
+
+                                    h3{
+                                        font-size: 1.2rem;
+                                        font-weight: bold;
+                                        margin-bottom: 10px;
+                                        // Show line below the heading
+                                        border-bottom: 1px solid #eee;
+                                        padding-bottom: 10px;
+                                    }
+                                }
+
+                                .us-metrics-content{
+                                    display: flex;
+                                    gap: 20px;
+
+                                    .metric-box{
+                                        flex: 1;
+                                    }
+                                }
+                            }
                         }
 
                         .industries-selected{

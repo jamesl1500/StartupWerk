@@ -75,21 +75,39 @@
                             </div>
                         </div>
                         <div class="selected-industry-stats">
-                            <div class="industry-stats">
-                                <h3>Stat 1</h3>
-                                <p>Stats for Industry 1</p>
+                            <div class="us-metrics">
+                                <div class="us-metrics-head">
+                                    <h3>US Metrics for Industry 1</h3>
+                                </div>
+                                <div class="us-metrics-content">
+                                    <div class="industry-stats">
+                                        <h3>Statistics</h3>
+                                        <p>Stats for Industry 1</p>
+                                    </div>
+                                    <div class="industry-stats">
+                                        <h3>Skills required</h3>
+                                        <p>Stats for Industry 1</p>
+                                    </div>
+                                    <div class="industry-stats">
+                                        <h3>Startup Costs</h3>
+                                        <p>Stats for Industry 1</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="industry-stats">
-                                <h3>Stat 2</h3>
-                                <p>Stats for Industry 1</p>
-                            </div>
-                            <div class="industry-stats">
-                                <h3>Stat 3</h3>
-                                <p>Stats for Industry 1</p>
-                            </div>
-                            <div class="industry-stats">
-                                <h3>Stat 3</h3>
-                                <p>Stats for Industry 1</p>
+                            <div class="us-metrics">
+                                <div class="us-metrics-head">
+                                    <h3>Regional Metrics for Industry 1</h3>
+                                </div>
+                                <div class="us-metrics-content">
+                                    <div class="industry-stats">
+                                        <h3>Statistics</h3>
+                                        <p>Stats for Industry 1</p>
+                                    </div>
+                                    <div class="industry-stats">
+                                        <h3>Business Growth</h3>
+                                        <p>Stats for Industry 1</p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
