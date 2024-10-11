@@ -6,6 +6,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Support\Facades\Crypt;
 
 class User extends Authenticatable
 {
@@ -20,6 +21,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'provider_name',
+        'provider_id',
     ];
 
     /**
@@ -30,7 +33,22 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
         'remember_token',
+        'provider_token'
     ];
+
+    public function setProviderTokenAttribute($value){
+        return $this->attributes['provider_token'] = Crypt::crypt($value);
+    }
+
+    public function getProviderTokenAttribute($value)
+    {
+        return Crypt::decrypt($value);
+    }
+
+    public function userInterestsSelection()
+    {
+        return $this->hasMany(UserInterestsSelection::class);
+    }
 
     /**
      * Get the attributes that should be cast.

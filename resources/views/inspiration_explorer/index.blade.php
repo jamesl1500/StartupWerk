@@ -37,12 +37,31 @@
                     </div>
                     <div class="inspiration-explorer-content">
                         <div class="inspiration-explorer-search">
-                            <form action="#" method="GET">
+                            <form action="{{ route('inspiration_explorer.save') }}" method="POST">
+                                @csrf
                                 <div class="row">
                                     <div class="search-left col-lg-7">
                                         <div class="select-your-interests">
                                             <label for="interests">Select your interests</label><br>
-                                            <select name="interests" id="interests">
+                                            <select name="interests" id="selecting-interests">
+                                                <?php
+                                                // Usde curl to get the interests from the API
+                                                /* $ch = curl_init();
+                                                curl_setopt($ch, CURLOPT_URL, "http://13.52.110.55/api/v1/lookup_interests");
+                                                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                                                $output = curl_exec($ch);
+                                                curl_close($ch);
+
+                                                // Store the interests in a cookie for a month
+                                                setcookie("interests", $output, time() + (86400 * 30), "/"); 
+
+                                                $interests = json_decode($output, true);
+
+                                                foreach ($interests as $interest) {
+                                                    echo "<option value='" . $interest['id'] . "'>" . $interest['interest'] . "</option>";
+                                                } */
+                                                ?>
+                                                <option>Select interests</option>
                                                 <option value="1">Interest 1</option>
                                                 <option value="2">Interest 2</option>
                                                 <option value="3">Interest 3</option>
@@ -51,15 +70,37 @@
                                             <!-- When the user selects an interest, the page should reload and display the selected interest -->
                                             <div class="selected-interests">
                                                 <p>Selected Interest:</p>
-                                                <ul>
-                                                    <li>Interest 1 <span class="delete">x</span></li>
+                                                <ul class="selected-interests-ul" id="selected-interests-ul">
+                                                    <?php
+                                                        // Display selected interests from database for logged user
+                                                        $selectedInterests = Auth::user()->userInterestsSelection();
+                                                        foreach ($selectedInterests as $interest) {
+                                                            echo "<li>" . $interest->interest . "</li>";
+                                                        }
+
+                                                    ?>
                                                 </ul>
                                             </div>
                                         </div>
 
                                         <div class="select-your-skills-and-experience">
                                             <label for="skills-and-experience">Select your skills and experience</label><br>
-                                            <select name="skills-and-experience" id="skills-and-experience">
+                                            <select name="skills" id="skills-and-experience">
+                                                <?php
+                                                // Usde curl to get the skills from the API
+                                                /*$ch = curl_init();
+                                                curl_setopt($ch, CURLOPT_URL, "http://13.52.110.55/api/v1/lookup_skills");
+                                                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+                                                $output = curl_exec($ch);
+                                                curl_close($ch);
+
+                                                $skills = json_decode($output, true);
+
+                                                foreach ($skills as $skill) {
+                                                    echo "<option value='" . $skill['id'] . "'>" . $skill['skill'] . "</option>";
+                                                }*/
+                                                ?>
+                                                <option>Select skills</option>
                                                 <option value="1">Skill 1</option>
                                                 <option value="2">Skill 2</option>
                                                 <option value="3">Skill 3</option>
@@ -68,7 +109,7 @@
                                             <div class="selected-skills">
                                                 <p>Selected Skills:</p>
                                                 <ul>
-                                                    <li>Skill 1 <span class="delete">x</span></li>
+                                                    
                                                 </ul>
                                             </div>
                                         </div>
@@ -94,7 +135,7 @@
                         </div>
                         <div class="inspiration-explorer-results">
                             <div class="inspiration-explorer-results-header">
-                                <h2>Results</h2>
+                                <h2>Selected Industries</h2>
                                 <p>Here are the industries that you selected</p>
                             </div>
                             <div class="inspiration-explorer-results-content f">

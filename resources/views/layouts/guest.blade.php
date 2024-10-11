@@ -19,7 +19,7 @@
         <script src="https://kit.fontawesome.com/8ea51260da.js" crossorigin="anonymous"></script>
 
         <!-- Scripts -->
-        @vite(['resources/scss/app.scss', 'resources/js/app.js'])
+        @vite(['resources/scss/app.scss', 'resources/js/app.js', 'resources/js/scripts.js'])
     </head>
     <body class="font-sans text-gray-900 antialiased">
         <div class="header-navigation-area">

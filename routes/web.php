@@ -1,6 +1,9 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\Auth\SocialLoginController;
+use App\Http\Controllers\InspirationController;
+
 use Illuminate\Support\Facades\Route;
 
 use Laravel\Socialite\Facades\Socialite;
@@ -35,10 +38,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+Route::get('auth/{provider}/redirect', [SocialLoginController::class , 'redirect'])->name('auth.socialite.redirect');
+Route::get('auth/{provider}/callback', [SocialLoginController::class , 'callback'])->name('auth.socialite.callback');
+
 // Inspiration Exploror Routes
 Route::get('/inspiration', function () {
     return view('inspiration_explorer.index');
 })->name('inspiration_explorer.index');
+
+// Inspiration explorer form save
+Route::post('/inspiration/save', [InspirationController::class, 'save'])->name('inspiration_explorer.save');
 
 // Magazine Routes
 Route::get('/magazine', function () {

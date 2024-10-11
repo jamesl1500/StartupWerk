@@ -22,7 +22,7 @@
 
                     <!-- Signin with google -->
                     <div class="form-group">
-                        <a href="{{ route('socialite.google.redirect') }}" class="btn btn-primary w-full">
+                        <a href="{{route('auth.socialite.redirect','google')}}" class="btn btn-primary w-full">
                             <i class="fa fa-google"></i>
                             <span>Sign in with Google</span>
                         </a>
