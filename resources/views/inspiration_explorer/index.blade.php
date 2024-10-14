@@ -44,27 +44,23 @@
                                         <div class="select-your-interests">
                                             <label for="interests">Select your interests</label><br>
                                             <select name="interests" id="selecting-interests">
+                                                <option>Select interests</option>
                                                 <?php
                                                 // Usde curl to get the interests from the API
-                                                /* $ch = curl_init();
-                                                curl_setopt($ch, CURLOPT_URL, "http://13.52.110.55/api/v1/lookup_interests");
-                                                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                                                $output = curl_exec($ch);
-                                                curl_close($ch);
+                                                $ch1 = curl_init();
+                                                curl_setopt($ch1, CURLOPT_URL, "http://13.52.110.55/api/v1/lookup_interests");
+                                                curl_setopt($ch1, CURLOPT_RETURNTRANSFER, 1);
+                                                $output = curl_exec($ch1);
+                                                curl_close($ch1);
 
                                                 // Store the interests in a cookie for a month
-                                                setcookie("interests", $output, time() + (86400 * 30), "/"); 
 
                                                 $interests = json_decode($output, true);
 
                                                 foreach ($interests as $interest) {
-                                                    echo "<option value='" . $interest['id'] . "'>" . $interest['interest'] . "</option>";
-                                                } */
+                                                    echo "<option value='" . $interest['id'] . "'>" . ucwords($interest['interest']) . "</option>";
+                                                } 
                                                 ?>
-                                                <option>Select interests</option>
-                                                <option value="1">Interest 1</option>
-                                                <option value="2">Interest 2</option>
-                                                <option value="3">Interest 3</option>
                                             </select>
 
                                             <!-- When the user selects an interest, the page should reload and display the selected interest -->
@@ -86,24 +82,21 @@
                                         <div class="select-your-skills-and-experience">
                                             <label for="skills-and-experience">Select your skills and experience</label><br>
                                             <select name="skills" id="skills-and-experience">
+                                                <option>Select skills</option>
                                                 <?php
                                                 // Usde curl to get the skills from the API
-                                                /*$ch = curl_init();
-                                                curl_setopt($ch, CURLOPT_URL, "http://13.52.110.55/api/v1/lookup_skills");
-                                                curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-                                                $output = curl_exec($ch);
-                                                curl_close($ch);
+                                                $ch2 = curl_init();
+                                                curl_setopt($ch2, CURLOPT_URL, "http://13.52.110.55/api/v1/lookup_skills");
+                                                curl_setopt($ch2, CURLOPT_RETURNTRANSFER, 1);
+                                                $output = curl_exec($ch2);
+                                                curl_close($ch2);
 
                                                 $skills = json_decode($output, true);
 
                                                 foreach ($skills as $skill) {
-                                                    echo "<option value='" . $skill['id'] . "'>" . $skill['skill'] . "</option>";
-                                                }*/
+                                                    echo "<option value='" . $skill['id'] . "'>" . ucwords($skill['skill']) . "</option>";
+                                                }
                                                 ?>
-                                                <option>Select skills</option>
-                                                <option value="1">Skill 1</option>
-                                                <option value="2">Skill 2</option>
-                                                <option value="3">Skill 3</option>
                                             </select>
 
                                             <div class="selected-skills">

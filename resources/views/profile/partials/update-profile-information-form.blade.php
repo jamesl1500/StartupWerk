@@ -16,11 +16,25 @@
     <form method="post" action="{{ route('profile.update') }}" class="mt-6 space-y-6">
         @csrf
         @method('patch')
+        <div>
+            <x-input-label for="fname" :value="__('First name')" />
+            <x-text-input id="fname" name="fname" type="text" class="mt-1 block
+                w-full" :value="old('fname', $user->fname)" required autofocus autocomplete="fname" />
+            <x-input-error class="mt-2" :messages="$errors->get('fname')" />
+        </div>
 
         <div>
-            <x-input-label for="name" :value="__('Name')" />
-            <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
-            <x-input-error class="mt-2" :messages="$errors->get('name')" />
+            <x-input-label for="lname" :value="__('Last name')" />
+            <x-text-input id="lname" name="lname" type="text" class="mt-1 block
+                w-full" :value="old('lname', $user->lname)" required autofocus autocomplete="lname" />
+            <x-input-error class="mt-2" :messages="$errors->get('lname')" />
+        </div>
+
+        <div>
+            <x-input-label for="phone" :value="__('Phone number')" />
+            <x-text-input id="phone" name="phone" type="text" class="mt-1 block
+                w-full" :value="old('phone', $user->phone)" required autofocus autocomplete="phone" />
+            <x-input-error class="mt-2" :messages="$errors->get('phone')" />
         </div>
 
         <div>

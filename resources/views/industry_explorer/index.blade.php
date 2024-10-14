@@ -38,25 +38,70 @@
                     <div class="inspiration-explorer-content">
                         <div class="row">
                             <div class="inspiration-explorer-search col-lg-6">
-                                <form action="#" method="GET">
+                                <form action="#" method="POST">
+                                    <?php
+                                        // use curl toget stae and region from the API
+                                        $ch1 = curl_init();
+                                        curl_setopt($ch1, CURLOPT_URL, "http://13.52.110.55/api/v1/lookup_regions");
+                                        curl_setopt($ch1, CURLOPT_RETURNTRANSFER, 1);
+                                        $output = curl_exec($ch1);
+                                        curl_close($ch1);
+
+                                        $regions = json_decode($output, true);
+
+                                        $counties = array();
+                                        $states = array();
+
+                                        foreach ($regions as $region) {
+                                            $counties[] = $region['county'];
+                                            $states[] = $region['state'];
+                                        }
+                                    ?>
                                     <div class="select-your-interests select_region">
                                         <label for="region">Select your state</label><br>
                                         <select name="region" id="region">
-                                            <option value="AL">Ohio</option>
+                                            <?php
+                                                $states = array_unique($states);
+                                                foreach ($states as $state) {
+                                                    echo "<option value='" . $state . "'>" . ucwords($state) . "</option>";
+                                                }
+                                            ?>
                                         </select>
                                     </div>
                                     <div class="select-your-interests select_region">
                                         <label for="region">Select your region</label><br>
                                         <select name="region" id="region">
-                                            <option value="AL">Lorain County</option>
+                                            <?php
+                                                $counties = array_unique($counties);
+                                                foreach ($counties as $county) {
+                                                    echo "<option value='" . $county . "'>" . ucwords($county) . "</option>";
+                                                }
+                                            ?>
                                         </select>
                                     </div>
                                     <div class="select-your-interests">
                                         <label for="interests">Select your industries</label><br>
                                         <select name="interests" id="interests">
-                                            <option value="1">Industry 1</option>
-                                            <option value="2">Industry 2</option>
-                                            <option value="3">Industry 3</option>
+                                            <option>Select industries</option>
+                                            <?php
+                                                // Use curl to get the interests from the API
+                                                $ch1 = curl_init();
+                                                curl_setopt($ch1, CURLOPT_URL, "http://13.52.110.55/api/v1/lookup_industries");
+                                                curl_setopt($ch1, CURLOPT_RETURNTRANSFER, 1);
+                                                $output = curl_exec($ch1);
+                                                curl_close($ch1);
+
+                                                $industries = json_decode($output, true);
+
+                                                // Sort the industries alphabetically
+                                                usort($industries, function($a, $b) {
+                                                    return $a['industry'] <=> $b['industry'];
+                                                });
+
+                                                foreach ($industries as $industry) {
+                                                    echo "<option value='" . $industry['id'] . "'>" . ucwords($industry['industry']) . "</option>";
+                                                }
+                                            ?>
                                         </select>
 
                                         <!-- When the user selects an interest, the page should reload and display the selected interest -->

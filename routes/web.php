@@ -4,6 +4,10 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Auth\SocialLoginController;
 use App\Http\Controllers\InspirationController;
 
+use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\AccountSettingsController;
+use App\Http\Controllers\IndustriesExplorerController;
+
 use Illuminate\Support\Facades\Route;
 
 use Laravel\Socialite\Facades\Socialite;
@@ -24,13 +28,9 @@ Route::get('/search', function () {
     return view('search');
 })->name('search');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
-Route::get('/account', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('account');
+Route::get('/account', [AccountSettingsController::class, 'index'])->middleware(['auth', 'verified'])->name('account');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -42,12 +42,10 @@ Route::get('auth/{provider}/redirect', [SocialLoginController::class , 'redirect
 Route::get('auth/{provider}/callback', [SocialLoginController::class , 'callback'])->name('auth.socialite.callback');
 
 // Inspiration Exploror Routes
-Route::get('/inspiration', function () {
-    return view('inspiration_explorer.index');
-})->name('inspiration_explorer.index');
+Route::get('/inspiration_explorer', [InspirationController::class, 'index'])->middleware(['auth', 'verified'])->name('inspiration_explorer.index');
 
 // Inspiration explorer form save
-Route::post('/inspiration/save', [InspirationController::class, 'save'])->name('inspiration_explorer.save');
+Route::post('/inspiration_explorer/save', [InspirationController::class, 'save'])->middleware(['auth', 'verified'])->name('inspiration_explorer.save');
 
 // Magazine Routes
 Route::get('/magazine', function () {
@@ -55,9 +53,7 @@ Route::get('/magazine', function () {
 })->name('magazine.index');
 
 // Industry
-Route::get('/industry', function () {
-    return view('industry_explorer.index');
-})->name('industry.index');
+Route::get('/industry_explorer', [IndustriesExplorerController::class, 'index'])->middleware(['auth', 'verified'])->name('industry.index');
 
 // Socialite routes
 Route::get('/auth/redirect/google', function () {

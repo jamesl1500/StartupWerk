@@ -28,7 +28,7 @@
                         </a>
                     </div>
 
-                    <!-- FDirstname -->
+                    <!-- Firstname -->
                     <div class="form-group">
                         <x-input-label for="fname" :value="__('First name')" />
                         <x-text-input id="fname" class="block mt-1 w-full" type="text" name="fname" :value="old('fname')" required autofocus autocomplete="fname" />
@@ -40,6 +40,13 @@
                         <x-input-label for="lname" :value="__('Last name')" />
                         <x-text-input id="lname" class="block mt-1 w-full" type="text" name="lname" :value="old('lname')" required autofocus autocomplete="lname" />
                         <x-input-error :messages="$errors->get('lname')" class="mt-2" />
+                    </div>
+
+                    <!-- Phone number -->
+                    <div class="form-group">
+                        <x-input-label for="phone" :value="__('Phone number')" />
+                        <x-text-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required autofocus autocomplete="phone" />
+                        <x-input-error :messages="$errors->get('phone')" class="mt-2" />
                     </div>
 
                     <!-- Email Address -->
